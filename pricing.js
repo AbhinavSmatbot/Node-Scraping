@@ -8,7 +8,7 @@ let table = new Table({
 request('https://modiproperties.com/project-inner.php?pageid=427',(error, response, html) => {
 if(!error && response.statusCode == 200) {
     const $ =  cheerio.load(html);
-
+     // code for single value
     //const pricingtable = $('.pricing-content-section');
      // console.log(pricingtable.text());  //for text formet working output in text formet
      //console.log(pricingtable.html()); //for html formet working output in html formet table
@@ -23,13 +23,6 @@ if(!error && response.statusCode == 200) {
     
       console.log(item);
       });
-
-       // const structDatas = [
-       //    { handler: 'http', endpoint: 'http://localhost:3000/path', method: 'ALL' },
-       //   { handler: 'event', endpoint: 'http://localhost:3000/event', method: 'POST' },
-       //   { handler: 'GCS', endpoint: 'http://localhost:3000/GCS', method: 'POST' }
-       // ];
-       // console.table(structDatas);
     }
 });
 

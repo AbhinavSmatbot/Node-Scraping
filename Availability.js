@@ -1,5 +1,5 @@
 const request = require("request-promise"); //web Scripting Library using Node
-const cheerio = require("cheerio");        //web Scripting Library us ing Node    
+const cheerio = require("cheerio");        //web Scripting Library using Node    
 const fs = require('fs');                  
 
 async function main() {
@@ -7,7 +7,6 @@ async function main() {
     const $ = cheerio.load(result);
     const scrapedData = [];
     $('.availability-content-section ul').each((index, ul) => {
-       // if (index === 0) return true;
         const tds = $(ul).find('li');
         const Sold = $(tds[0]).text();
         const Available = $(tds[1]).text();
